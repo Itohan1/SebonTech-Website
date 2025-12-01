@@ -12,7 +12,7 @@
 
     --color-*: initial;
     --color-transparent: transparent;
-    --color-current: currentColor;
+    --color-current: curr entColor;
     --color-white: #ffffff;
     --color-black: #000000;
     --color-primary: #d9681a; /* deeper orange, less neon */
@@ -148,6 +148,14 @@
         }
     }
 }
+
+/*.partners {
+    @apply transition-colors duration-300 ease-in-out;
+}
+
+.scrolled .partners {
+    @apply bg-white top-20;
+}*/
 
 /* Sticky Header */
 header.sticky-header {

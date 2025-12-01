@@ -110,8 +110,12 @@
                           </a>
                         </div>
                         <div class="ms-auto flex w-full lg:gap-20 gap-10">
+                             <div id="menuOverlay"
+                               class="fixed inset-0 bg-black/50 z-10 hidden lg:hidden"
+                               onclick="toggleMenu()">
+                             </div>
                             <div
-                                class="navbar end-full w-full fixed top-0 z-20 inline-flex h-full items-center gap-10 duration-500 lg:static lg:h-auto lg:w-auto"
+                                class="navbar end-full w-auto fixed top-0 z-20 inline-flex h-full items-center gap-10 duration-500 lg:static lg:h-auto lg:w-auto"
                             >
                                 <button type="button" onclick="toggleMenu()" class="absolute right-5 top-5 h-12 w-12 text-white lg:hidden">
                                     <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -124,25 +128,25 @@
                                     <span class="sr-only">Close</span>
                                 </button>
                                 <ul
-                                    class="group inline-flex h-full w-full flex-col items-center gap-8 overflow-y-auto bg-secondary px-5 pb-10 pt-24 text-base font-semibold text-white sm:text-lg lg:w-auto lg:flex-row lg:bg-transparent lg:p-0 lg:text-base lg:text-purple-600 dark:lg:text-purple-500 xl:gap-10"
+                                    class="group inline-flex whitespace-nowrap h-full w-full flex-col items-center gap-8 overflow-y-auto bg-secondary px-5 pb-10 pt-24 text-base font-semibold text-white sm:text-lg lg:w-auto lg:flex-row lg:bg-transparent lg:p-0 lg:text-base lg:text-purple-600 dark:lg:text-purple-500 xl:gap-10"
                                 >
                                     <li>
                                         <a href="index.html" class="nav-link active">Home</a>
                                     </li>
                                     <li>
-                                        <a href="index.html" class="nav-link">Services</a>
+                                        <a href="#services" class="nav-link">Services</a>
                                     </li>
                                     <li>
-                                        <a href="index.html" class="nav-link">Blogs</a>
+                                        <a href="#performance" class="nav-link">Performance</a>
                                     </li>
                                     <li>
-                                        <a href="index.html" class="nav-link">Portfolio</a>
+                                        <a href="#why-us" class="nav-link">Why Us</a>
                                     </li>
-                                    <li>
-                                        <a href="index.html" class="nav-link">Career</a>
-                                    </li>
+                                    <!--<li>
+                                        <a href="#testimonial" class="nav-link">Testimonials</a>
+                                    </li>-->
                                     <li class="inline-block lg:hidden">
-                                        <a href="index.html" class="nav-link">Contact us</a>
+                                        <a href="#contact" class="nav-link">Contact us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -211,7 +215,7 @@
                                         </span>
                                     </div>
                                 </label>-->
-                                <a href="index.html" class="btn hidden lg:inline-flex text-base whitespace-nowrap">Contact us</a>
+                                <a href="#contact" class="btn hidden lg:inline-flex text-base whitespace-nowrap">Contact us</a>
                                 <button type="button" onclick="toggleMenu()" class="inline-block ml-40 lg:mr-0 space-y-1 lg:hidden">
                                     <span class="flex h-0.5 w-7 rounded-full bg-primary"></span>
                                     <span class="flex h-0.5 w-7 rounded-full bg-primary"></span>
@@ -224,10 +228,110 @@
                     </div>
                 </div>
             </header>
+            <!-- Partners Section -->
+        <section class="partners fixed z-50 pt-3 top-25 dark:bg-purple-900/20">
+  <!--<h2 class="text-center text-3xl font-bold text-purple-700 dark:text-purple-300 mb-10">
+    Our Trusted Partners
+  </h2>-->
+
+          <!--<div class="overflow-hidden relative">
+            <div class="flex items-center gap-16 animate-scroll">
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/msport.png" class="h-12 w-auto object-contain rounded-md" />
+              </div>
+
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/sportybet.png" class="h-12 w-auto rounded-md object-contain" />
+             </div>
+
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/Bet9ja Logo Vector.svg .png" class="h-12 w-auto object-contain" />
+              </div>
+
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/transsion-logo.svg" class="h-8 w-auto object-contain" />
+             </div>
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/Palmstore.jpeg" class="h-12 w-auto object-contain" />
+              </div>
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/Nestle.svg" class="h-9 w-auto object-contain" />
+              </div>
+
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/MTN Icon Logo Vector.svg .png" class="h-12 w-auto object-contain" />
+              </div>
+              <div class="flex items-center gap-3 whitespace-nowrap">
+                <img src="assets/images/Airtel Logo Vector.svg" class="h-12 w-auto object-contain" />
+              </div>
+            </div>
+          </div>-->
+            <div class="overflow-hidden relative">
+              <div class="flex items-center gap-16 animate-scroll">
+    
+    <!-- First Loop -->
+                <div class="logos flex items-center gap-16">
+                  <img src="assets/images/msport.png" class="h-10 w-auto object-contain rounded-md" />
+                  <img src="assets/images/sportybet.png" class="h-10 w-auto rounded-md object-contain" />
+                  <img src="assets/images/Bet9ja Logo Vector.svg .png" class="h-10 w-auto object-contain" />
+                  <img src="assets/images/transsion-logo.svg" class="h-6 w-auto object-contain" />
+                  <img src="assets/images/Palmstore.jpeg" class="h-10 w-auto object-contain" />
+                  <img src="assets/images/Nestle.svg" class="h-7 w-auto object-contain" />
+                  <img src="assets/images/MTN Icon Logo Vector.svg .png" class="h-10 w-auto object-contain" />
+                  <img src="assets/images/Airtel Logo Vector.svg" class="h-10 w-auto object-contain" />
+                </div>
+
+    <!-- Duplicate logos for seamless scroll -->
+                <div class="logos flex items-center gap-16">
+      <!-- repeat the same list EXACTLY -->
+                  <img src="assets/images/msport.png" class="h-10 w-auto object-contain rounded-md" />
+                  <img src="assets/images/sportybet.png" class="h-10 w-auto rounded-md object-contain" />
+                  <img src="assets/images/Bet9ja Logo Vector.svg .png" class="h-10 w-auto object-contain" />
+                  <img src="assets/images/transsion-logo.svg" class="h-6 w-auto object-contain" />
+                  <img src="assets/images/Palmstore.jpeg" class="h-10 w-auto object-contain" />
+                  <img src="assets/images/Nestle.svg" class="h-7 w-auto object-contain" />
+                  <img src="assets/images/MTN Icon Logo Vector.svg .png" class="h-10 w-auto object-contain" />
+                  <img src="assets/images/Airtel Logo Vector.svg" class="h-10 w-auto object-contain" />
+                </div>
+              </div>
+            </div>
+        </section>
+<style>
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-scroll {
+    animation: scroll-left 20s linear infinite;
+    width: max-content;
+  }
+
+  .partners {
+    transition: background-color 0.3s ease;
+  }
+
+  .scrolled .partners {
+    background: white;
+    top: 5rem;      /* light mode */
+  }
+  /*.animate-scroll {
+    animation: scroll-left 20s linear infinite;
+  }*/
+</style>
+<script>
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 10) {
+            document.body.classList.add("scrolled");
+        } else {
+            document.body.classList.remove("scrolled");
+        }
+    });
+</script>
 
             <!-- Inner Content -->
             <!-- NEW MODERN HERO SECTION -->
-<div class="relative overflow-hidden overflow-x-hidden bg-gradient-to-b from-purple-50 to-white dark:from-purple-900 dark:to-purple-950 pt-32">
+<div class="relative overflow-hidden overflow-x-hidden bg-gradient-to-b from-purple-50 to-white dark:from-purple-900 dark:to-purple-950 pt-50">
 
   <!-- Animated floating blobs -->
   <div class="absolute top-20 left-10 w-64 h-64 bg-purple-300/40 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -299,7 +403,7 @@
 
     <!-- CTA Buttons -->
     <div class="mt-10 flex justify-center gap-4 flex-col lg:flex-row animate-slide-up delay-300">
-      <a href="index.html"
+      <a href="#contact"
          class="px-15 lg:px-6 text-lg  lg:text-sm py-4 lg:py-3 w-auto self-center  bg-purple-700 text-white rounded-2xl font-semibold shadow-lg 
                 hover:bg-purple-800 hover:shadow-xl transition-all duration-300">
         Talk to Sales
@@ -319,7 +423,7 @@
          class="mx-auto mt-14 w-40 md:w-30 animate-float pointer-events-none" />
 
   </div>
-</>
+</script>
 
 <!-- ANIMATIONS -->
 <style>
@@ -427,7 +531,7 @@
                             <div class="swiper logo-slider">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <a href="javascript:" class="flex gap-2 justify-center items-center"><img loading="lazy" src="assets/images/icons8-game-controller-48.png" alt="Partner logo" class="" /><h1 class="text-white font-bold">Games<h1></a>
+                                        <a href="javascript:" class="flex gap-2 justify-center items-center"><img loading="lazy" src="assets/images/icons8-game-controller-48.png" alt="Partner logo" class="" /><h1 class="text-white font-bold">Gaming<h1></a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="javascript:" class="flex gap-2 justify-center items-center"><img loading="lazy" src="assets/images/icons8-export-collections-48.png" alt="Partner logo" class="" /><h1 class="text-white font-bold">FinTech<h1></a>
@@ -453,7 +557,7 @@
                     </div>
                 </div>
 
-                <div class="relative overflow-x-hidden py-16 lg:py-[5px] lg:pb-28 lg:pt-36">
+                <div id="services" class="relative overflow-x-hidden py-16 lg:py-[5px] lg:pb-28 lg:pt-36">
                     <img
                         src="assets/images/high-impact-bg.svg"
                         alt="Impact image"
@@ -613,16 +717,16 @@
                     </div>
                 </div>
 
-                <div class="overflow-x-hidden">
+                <div id="performance" class="overflow-x-hidden">
                     <div class="mx-auto max-w-[1142px] px-4">
                         <div class="relative mx-auto pb-10 text-center lg:w-2/3 lg:pb-14">
                             <img loading="lazy" src="assets/images/pink-star.svg" alt="Pink star" class="absolute -right-24 top-10" />
-                            <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Make your marketing more effective</h2>
+                            <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Accelerate Your Marketing Performance</h2>
                             <p class="text-lg md:text-xl">
-                                E-commerce brands can acquire and retain new customers using solutions that span the entire customer journey.
+                                End-to-end solutions that help e-commerce brands attract, convert, and retain customers.
                             </p>
                         </div>
-                        <div class="relative flex grid-cols-3 flex-col gap-[30px] lg:grid">
+                        <div class="relative overflow-hidden flex grid-cols-3 flex-col gap-[30px] lg:grid">
                             <span class="absolute -top-14 right-full" data-aos="fade-up-left" data-aos-duration="1000">
                                 <svg width="144" height="61" viewBox="0 0 144 61" fill="none">
                                     <path
@@ -690,12 +794,12 @@
                                     </defs>
                                 </svg>
                             </span>
-                            <div class="relative inline-flex flex-col justify-between gap-10 rounded-lg bg-green px-4 pt-10 leading-6 text-white sm:px-7">
+                            <div class="relative col-span-3 inline-flex flex-col lg:flex-row justify-between gap-10 rounded-lg bg-purple-900 px-4 pt-10 leading-6 text-white sm:px-7 sm:py-10">
                                 <div>
-                                    <h3 class="mb-6 text-22 font-semibold">Marketing Automation</h3>
-                                    <p>Our team has a successful track record of helping brands.</p>
-                                    <a href="javascript:" class="group mt-10 inline-flex items-center gap-2.5 font-semibold">
-                                        <span>Learn more</span>
+                                    <h3 class="mb-6 text-22 font-semibold">Smart Marketing Systems</h3>
+                                    <p>Our team has a proven track record of helping brands streamline their processes, reach the right audience, and drive consistent growth through smart, automated marketing solutions.</p>
+                                    <!--<a href="javascript:" class="group mt-10 inline-flex items-center gap-2.5 font-semibold">
+                                        <!--<span>Learn more</span>
                                         <span
                                             class="relative start-0 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-transparent from-50% to-white/40 to-50% duration-300 group-hover:start-1 rtl:rotate-180"
                                         >
@@ -706,27 +810,26 @@
                                                 />
                                             </svg>
                                         </span>
-                                    </a>
+                                    </a>-->
                                 </div>
-                                <div class="overflow-hidden rounded-t-lg lg:h-48">
+                                <div class="overflow-hidden rounded-t-lg lg:rounded-lg lg:h-full lg:w-[50%]">
                                     <img
                                         loading="lazy"
-                                        src="assets/images/marketing-automation.jpg"
+                                        src="assets/images/full-shot-smiley-people-work.jpg"
                                         alt="Marketing automation"
                                         class="h-full w-full object-cover"
                                     />
                                 </div>
                             </div>
                             <div
-                                class="relative col-span-2 inline-flex flex-col justify-between gap-10 rounded-lg bg-primary px-4 pt-10 leading-6 text-white sm:px-7"
+                                class="relative col-span-3 inline-flex flex-col lg:flex-row justify-between gap-10 rounded-lg bg-primary px-4 pt-10 leading-6 text-white sm:px-7 sm:py-10"
                             >
                                 <div>
                                     <h3 class="mb-6 text-22 font-semibold">Content Marketing</h3>
                                     <p>
-                                        Our team has a successful track record of helping brands scale profitably based on high-performing strategies.
-                                        E-commerce brands can acquire and retain new customers using solutions that span the entire customer journey.
+                                        Our team has a proven track record of helping brands scale profitably through high-performing content strategies. We empower e-commerce businesses to attract, convert, and retain customers with solutions that support every stage of the customer journey.
                                     </p>
-                                    <a href="javascript:" class="group mt-10 inline-flex items-center gap-2.5 font-semibold">
+                                    <!--<a href="javascript:" class="group mt-10 inline-flex items-center gap-2.5 font-semibold">
                                         <span>Learn more</span>
                                         <span
                                             class="relative start-0 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-transparent from-50% to-white/40 to-50% duration-300 group-hover:start-1 rtl:rotate-180"
@@ -738,19 +841,24 @@
                                                 />
                                             </svg>
                                         </span>
-                                    </a>
+                                    </a>-->
                                 </div>
-                                <div class="overflow-hidden rounded-t-lg lg:h-40">
-                                    <img loading="lazy" src="assets/images/content-marketing.jpg" alt="Content marketing" class="h-full w-full object-cover" />
+                                <div class="overflow-hidden rounded-t-lg lg:rounded-lg lg:h-full lg:w-[50%]">
+                                    <img
+                                        loading="lazy"
+                                        src="assets/images/growth-chart-with-different-colors.jpg"
+                                        alt="Marketing automation"
+                                        class="h-full w-full object-cover"
+                                    />
                                 </div>
                             </div>
                             <div
-                                class="relative col-span-3 inline-flex flex-col justify-between gap-10 rounded-lg bg-yellow px-4 pt-10 leading-6 text-secondary sm:px-7 lg:flex-row lg:gap-7"
+                                class="relative col-span-3 inline-flex flex-col lg:flex-row justify-between gap-10 rounded-lg bg-yellow px-4 pt-10 leading-6 text-black sm:px-7 sm:py-10 lg:max-h-60"
                             >
                                 <div>
                                     <h3 class="mb-6 text-22 font-semibold">Social Media Marketing</h3>
-                                    <p>Leads are nurtured through our email, SMS, and automation services, resulting in customer acquisition and retention.</p>
-                                    <a href="javascript:" class="group mt-10 inline-flex items-center gap-2.5 font-semibold">
+                                    <p>By leveraging email, SMS, and automated workflows, we guide leads into loyal, long-term customers.</p>
+                                    <!--<a href="javascript:" class="group mt-10 inline-flex items-center gap-2.5 font-semibold">
                                         <span>Learn more</span>
                                         <span
                                             class="relative start-0 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-linear-to-r from-transparent from-50% to-secondary/40 to-50% duration-300 group-hover:start-1 rtl:rotate-180"
@@ -762,12 +870,12 @@
                                                 />
                                             </svg>
                                         </span>
-                                    </a>
+                                    </a>-->
                                 </div>
-                                <div class="w-full overflow-hidden rounded-t-lg lg:h-56 lg:max-w-lg">
+                                <div class="overflow-hidden rounded-t-lg lg:rounded-lg lg:h-full lg:w-[50%]">
                                     <img
                                         loading="lazy"
-                                        src="assets/images/social-media-marketing.jpg"
+                                        src="assets/images/social-media-marketing-concept-marketing-with-applications.jpg"
                                         alt="Media marketing"
                                         class="h-full w-full object-cover"
                                     />
@@ -777,7 +885,7 @@
                     </div>
                 </div>
 
-                <div class="overflow-x-hidden pt-16 lg:pt-36">
+                <!--<div class="overflow-x-hidden pt-16 lg:pt-36 lg:px-10">
                     <div class="mx-auto flex max-w-[1142px] flex-col items-center gap-5 px-4 md:flex-row">
                         <div class="shrink-0 md:w-3/5">
                             <div class="pb-10 text-center md:ltr:text-left md:rtl:text-right lg:w-2/3 lg:pb-14">
@@ -811,13 +919,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="md:-me-[19%] xl:ms-14" data-aos="fade-left" data-aos-duration="1000">
-                            <img loading="lazy" src="assets/images/our-process.png" alt="Our process" class="h-full w-full object-cover" />
+                        <div class="md:-me-[19%] xl:ms-14 flex" data-aos="fade-left" data-aos-duration="1000">
+                            <img loading="lazy" src="assets/images/man-woman-using-digital-tablet.jpg" alt="Our process" class="h-[60%] w-[70%] lg:w-[60%] object-cover" />
+                            <img loading="lazy" src="assets/images/growth-chart-with-different-colors.jpg" alt="Our process" class="h-[40%] -ml-17 lg:-ml-30 w-[50%] lg:w-[40%] mt-60 lg:mt-90 object-cover" />
                         </div>
                     </div>
-                </div>
+                </div>-->
 
-                <div class="overflow-x-hidden py-16 lg:pb-44 lg:pt-32">
+                <div id="why-us" class="overflow-x-hidden py-16 lg:pb-44 lg:pt-32">
                     <div class="relative mx-auto max-w-[1142px] gap-5 px-4 lg:flex">
                         <img loading="lazy" src="assets/images/why-choose-bg.svg" alt="Why choose bg" class="absolute right-0 top-0 xl:-right-44 xl:-top-12" />
                         <div class="relative mx-auto shrink-0 sm:w-1/2 lg:mx-0">
@@ -864,45 +973,45 @@
                                 </svg>
                             </span>
                             <div class="relative w-1/2 overflow-hidden rounded-lg" data-aos="fade-right" data-aos-duration="1000">
-                                <img loading="lazy" src="assets/images/advance-tracking.jpg" alt="Advance tracking" class="h-full w-full object-cover" />
+                                <img loading="lazy" src="assets/images/high-angle-people-table-office-meeting.jpg" alt="Advance tracking" class="h-full w-full object-cover" />
                             </div>
                             <div class="relative ms-auto w-1/2 overflow-hidden rounded-lg lg:-mt-10 lg:me-10" data-aos="fade-right" data-aos-duration="1000">
-                                <img loading="lazy" src="assets/images/depth-monitoring.jpg" alt="Depth monitoring" class="h-full w-full object-cover" />
+                                <img loading="lazy" src="assets/images/data-analytics-dashboard.jpg" alt="Depth monitoring" class="h-full w-full object-cover" />
                             </div>
                         </div>
                         <div class="relative mt-8">
                             <div class="pb-10 text-center lg:pb-14 lg:ltr:text-left lg:rtl:text-right">
                                 <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Why choose us</h2>
-                                <p class="text-lg md:text-xl">We help great brands scale with content marketing.</p>
+                                <!--<p class="text-lg md:text-xl">We help great brands scale with content marketing.</p>-->
                             </div>
                             <div class="space-y-12 pb-10 lg:pb-16">
                                 <div class="flex gap-4 leading-6 md:gap-8">
                                     <span class="shrink-0">
-                                        <img loading="lazy" src="assets/images/advance-tracking-icon.svg" alt="Advance tracking icon" />
+                                        <img loading="lazy" src="assets/images/icons8-results-48.png" alt="Advance tracking icon" />
                                     </span>
                                     <div>
-                                        <h3 class="pb-4 text-xl font-semibold text-purple-700 dark:text-white md:text-22">Advanced tracking</h3>
-                                        <p>Use our analytics, reporting, and AI-assisted optimization tools to monitor trends, track.</p>
+                                        <h3 class="pb-4 text-xl font-semibold text-purple-700 dark:text-white md:text-22">Results-Driven Approach</h3>
+                                        <p>We focus on campaigns that deliver measurable impact — more leads, more conversions, and sustainable growth for your business.</p>
                                     </div>
                                 </div>
                                 <div class="flex gap-4 leading-6 md:gap-8">
                                     <span class="shrink-0">
-                                        <img loading="lazy" src="assets/images/depth-monitoring-icon.svg" alt="Depth monitoring icon" />
+                                        <img loading="lazy" src="assets/images/icons8-team-48.png" alt="Depth monitoring icon" />
                                     </span>
                                     <div>
-                                        <h3 class="pb-4 text-xl font-semibold text-purple-700 dark:text-white md:text-22">In - depth monitoring</h3>
-                                        <p>Time Tracking is never been easier. Just let the stopwatch run.</p>
+                                        <h3 class="pb-4 text-xl font-semibold text-purple-700 dark:text-white md:text-22"> Experienced & Professional Team</h3>
+                                        <p>Our experts bring years of hands-on experience in digital marketing, branding, creative strategy, and performance marketing across multiple industries.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="inline-flex text-center lg:ltr:text-left lg:rtl:text-right">
+                            <!--<div class="inline-flex text-center lg:ltr:text-left lg:rtl:text-right">
                                 <a href="index.html" class="btn">About us</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
 
-                <div class="pb-16 lg:pb-36">
+                <!--<div class="pb-16 lg:pb-36">
                     <div class="mx-auto max-w-[1142px] px-4">
                         <div class="mx-auto pb-14 text-center lg:w-2/3 lg:pb-24">
                             <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Choose your plan</h2>
@@ -1560,9 +1669,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
-                <div class="pb-16 lg:pb-28">
+                <!--<div id="testimonial" class="pb-16 lg:pb-28">
                     <div class="mx-auto max-w-[1142px] px-4">
                         <div class="mx-auto pb-6 text-center lg:w-2/3">
                             <h2 class="mb-5 text-[26px]/7 font-bold text-purple-700 dark:text-white">Testimonial</h2>
@@ -2162,7 +2271,7 @@
                     </div>
                 </div>
 
-                <div
+                <!--<div
                     class="relative mx-auto flex w-full max-w-[1536px] flex-col items-center justify-between gap-x-4 gap-y-10 bg-secondary px-5 py-11 dark:bg-purple-900 sm:px-16 md:mb-10 lg:flex-row xl:rounded-lg"
                 >
                     <img
@@ -2191,7 +2300,54 @@
                         </button>
                     </div>
                 </div>
-            </div>
+            </div>-->
+            <!-- Contact / Call-to-Action Section -->
+<section id="contact" class="lg:px-50 py-20 text-white bg-purple-400 dark:bg-purple-900">
+  <div class="mb-8 text-center">
+        <h2 class="text-3xl font-semibold text-purple-700 dark:text-white">We’re here for you</h2>
+        <p class="mt-3 text-base text-purple-700 dark:text-purple-300">
+          Whether you need support, want to learn, or would like to partner with us, we’d love to hear from you.
+        </p>
+  </div>
+  <div class="container">
+    <div class="mx-auto max-w-4xl rounded-2xl bg-white dark:bg-purple-900 p-8 md:p-12 shadow-lg">
+
+      <form action="https://api.web3forms.com/submit" method="POST" class="grid gap-4 md:grid-cols-2" novalidate>
+        <!-- Name -->
+        <input type="hidden" name="access_key" value="8347db0c-0295-4fde-9926-f2ec190ea115">
+        <div class="md:col-span-1">
+          <label for="name" class="mb-2 block text-sm font-medium text-purple-700 dark:text-white">Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter name" required
+                 class="form-input sm:text-sm text-purple-700 placeholder-purple-400" />
+        </div>
+
+        <!-- Email -->
+        <div class="md:col-span-1">
+          <label for="email" class="mb-2 block text-sm font-medium text-purple-700 dark:text-white">Email</label>
+          <input id="email" name="email" type="email" placeholder="Enter email address" required
+                 class="form-input sm:text-sm text-purple-700 placeholder-purple-400" />
+        </div>
+
+        <!-- Message (full width) -->
+        <div class="md:col-span-2">
+          <label for="message" class="mb-2 block text-sm font-medium text-purple-700 dark:text-white">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Start typing..."
+                    class="form-textarea sm:text-sm text-purple-700 placeholder-purple-400" required></textarea>
+        </div>
+
+        <!-- Status and Button -->
+        <div class="md:col-span-2 flex flex-col items-start sm:flex-row sm:items-center sm:justify-between gap-3">
+          <div id="contactStatu" class="w-full text-sm text-purple-600 dark:text-purple-300"></div>
+          <button type="submit" class="btn inline-flex sm:text-sm items-center whitespace-nowrap justify-center">
+            Send message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Minimal JS to handle the form submit (replace /api/contact with your real endpoint) -->
 
             <!-- Footer -->
             <footer class="mt-auto">
@@ -2202,9 +2358,9 @@
                                 <img loading="lazy" src="assets/images/sabon-tech-Logo.jpeg" alt="Logo" class="inline-flex dark:hidden" />
                                 <img loading="lazy" src="assets/images/sabon-tech-Logo.jpeg" alt="Logo" class="hidden dark:inline-flex" />
                             </a>
-                            <div class="md:ps-8">6000 Columbus Ave, Plano, Texas, USA 75024</div>
+                            <div class="md:ps-8">Ikeja Lagos Mainland</div>
                         </div>
-                        <ul class="inline-flex items-center gap-8 text-purple-400">
+                        <!--<ul class="inline-flex items-center gap-8 text-purple-400">
                             <li>
                                 <a href="javascript:" class="inline-flex duration-300 hover:scale-125 hover:text-primary">
                                     <svg width="26" height="27" viewBox="0 0 26 27" fill="none">
@@ -2231,7 +2387,7 @@
                                 <a href="javascript:" class="inline-flex duration-300 hover:scale-125 hover:text-primary">
                                     <svg width="26" height="27" viewBox="0 0 26 27" fill="none">
                                         <path
-                                            d="M13 2.84102C16.4734 2.84102 16.8848 2.85625 18.2508 2.91719C19.5203 2.97305 20.2059 3.18633 20.6629 3.36406C21.2672 3.59766 21.7039 3.88203 22.1559 4.33398C22.6129 4.79102 22.8922 5.22266 23.1258 5.82695C23.3035 6.28398 23.5168 6.97461 23.5727 8.23906C23.6336 9.61016 23.6488 10.0215 23.6488 13.4898C23.6488 16.9633 23.6336 17.3746 23.5727 18.7406C23.5168 20.0102 23.3035 20.6957 23.1258 21.1527C22.8922 21.757 22.6078 22.1938 22.1559 22.6457C21.6988 23.1027 21.2672 23.382 20.6629 23.6156C20.2059 23.7934 19.5152 24.0066 18.2508 24.0625C16.8797 24.1234 16.4684 24.1387 13 24.1387C9.52656 24.1387 9.11524 24.1234 7.74922 24.0625C6.47969 24.0066 5.79414 23.7934 5.33711 23.6156C4.73281 23.382 4.29609 23.0977 3.84414 22.6457C3.38711 22.1887 3.10781 21.757 2.87422 21.1527C2.69648 20.6957 2.4832 20.0051 2.42734 18.7406C2.36641 17.3695 2.35117 16.9582 2.35117 13.4898C2.35117 10.0164 2.36641 9.60508 2.42734 8.23906C2.4832 6.96953 2.69648 6.28398 2.87422 5.82695C3.10781 5.22266 3.39219 4.78594 3.84414 4.33398C4.30117 3.87695 4.73281 3.59766 5.33711 3.36406C5.79414 3.18633 6.48477 2.97305 7.74922 2.91719C9.11524 2.85625 9.52656 2.84102 13 2.84102ZM13 0.5C9.4707 0.5 9.02891 0.515234 7.64258 0.576172C6.26133 0.637109 5.31172 0.860547 4.48906 1.18047C3.63086 1.51562 2.90469 1.95742 2.18359 2.68359C1.45742 3.40469 1.01563 4.13086 0.680469 4.98398C0.360547 5.81172 0.137109 6.75625 0.0761719 8.1375C0.0152344 9.52891 0 9.9707 0 13.5C0 17.0293 0.0152344 17.4711 0.0761719 18.8574C0.137109 20.2387 0.360547 21.1883 0.680469 22.0109C1.01563 22.8691 1.45742 23.5953 2.18359 24.3164C2.90469 25.0375 3.63086 25.4844 4.48398 25.8145C5.31172 26.1344 6.25625 26.3578 7.6375 26.4188C9.02383 26.4797 9.46563 26.4949 12.9949 26.4949C16.5242 26.4949 16.966 26.4797 18.3523 26.4188C19.7336 26.3578 20.6832 26.1344 21.5059 25.8145C22.359 25.4844 23.0852 25.0375 23.8063 24.3164C24.5273 23.5953 24.9742 22.8691 25.3043 22.016C25.6242 21.1883 25.8477 20.2438 25.9086 18.8625C25.9695 17.4762 25.9848 17.0344 25.9848 13.5051C25.9848 9.97578 25.9695 9.53399 25.9086 8.14766C25.8477 6.76641 25.6242 5.8168 25.3043 4.99414C24.9844 4.13086 24.5426 3.40469 23.8164 2.68359C23.0953 1.9625 22.3691 1.51562 21.516 1.18555C20.6883 0.865625 19.7438 0.642188 18.3625 0.58125C16.9711 0.515234 16.5293 0.5 13 0.5Z"
+                                            d="M13 2.84102C16.4734 2.8 4102 16.8848 2.85625 18.2508 2.91719C19.5203 2.97305 20.2059 3.18633 20.6629 3.36406C21.2672 3.59766 21.7039 3.88203 22.1559 4.33398C22.6129 4.79102 22.8922 5.22266 23.1258 5.82695C23.3035 6.28398 23.5168 6.97461 23.5727 8.23906C23.6336 9.61016 23.6488 10.0215 23.6488 13.4898C23.6488 16.9633 23.6336 17.3746 23.5727 18.7406C23.5168 20.0102 23.3035 20.6957 23.1258 21.1527C22.8922 21.757 22.6078 22.1938 22.1559 22.6457C21.6988 23.1027 21.2672 23.382 20.6629 23.6156C20.2059 23.7934 19.5152 24.0066 18.2508 24.0625C16.8797 24.1234 16.4684 24.1387 13 24.1387C9.52656 24.1387 9.11524 24.1234 7.74922 24.0625C6.47969 24.0066 5.79414 23.7934 5.33711 23.6156C4.73281 23.382 4.29609 23.0977 3.84414 22.6457C3.38711 22.1887 3.10781 21.757 2.87422 21.1527C2.69648 20.6957 2.4832 20.0051 2.42734 18.7406C2.36641 17.3695 2.35117 16.9582 2.35117 13.4898C2.35117 10.0164 2.36641 9.60508 2.42734 8.23906C2.4832 6.96953 2.69648 6.28398 2.87422 5.82695C3.10781 5.22266 3.39219 4.78594 3.84414 4.33398C4.30117 3.87695 4.73281 3.59766 5.33711 3.36406C5.79414 3.18633 6.48477 2.97305 7.74922 2.91719C9.11524 2.85625 9.52656 2.84102 13 2.84102ZM13 0.5C9.4707 0.5 9.02891 0.515234 7.64258 0.576172C6.26133 0.637109 5.31172 0.860547 4.48906 1.18047C3.63086 1.51562 2.90469 1.95742 2.18359 2.68359C1.45742 3.40469 1.01563 4.13086 0.680469 4.98398C0.360547 5.81172 0.137109 6.75625 0.0761719 8.1375C0.0152344 9.52891 0 9.9707 0 13.5C0 17.0293 0.0152344 17.4711 0.0761719 18.8574C0.137109 20.2387 0.360547 21.1883 0.680469 22.0109C1.01563 22.8691 1.45742 23.5953 2.18359 24.3164C2.90469 25.0375 3.63086 25.4844 4.48398 25.8145C5.31172 26.1344 6.25625 26.3578 7.6375 26.4188C9.02383 26.4797 9.46563 26.4949 12.9949 26.4949C16.5242 26.4949 16.966 26.4797 18.3523 26.4188C19.7336 26.3578 20.6832 26.1344 21.5059 25.8145C22.359 25.4844 23.0852 25.0375 23.8063 24.3164C24.5273 23.5953 24.9742 22.8691 25.3043 22.016C25.6242 21.1883 25.8477 20.2438 25.9086 18.8625C25.9695 17.4762 25.9848 17.0344 25.9848 13.5051C25.9848 9.97578 25.9695 9.53399 25.9086 8.14766C25.8477 6.76641 25.6242 5.8168 25.3043 4.99414C24.9844 4.13086 24.5426 3.40469 23.8164 2.68359C23.0953 1.9625 22.3691 1.51562 21.516 1.18555C20.6883 0.865625 19.7438 0.642188 18.3625 0.58125C16.9711 0.515234 16.5293 0.5 13 0.5Z"
                                             fill="currentColor"
                                         />
                                         <path
@@ -2257,7 +2413,7 @@
                                     <span class="sr-only">Linkedin</span>
                                 </a>
                             </li>
-                        </ul>
+                        </ul>--->
                     </div>
                     <div class="border-y-2 border-purple-200 px-4 py-10 dark:border-purple-900">
                         <div class="grid grid-cols-2 gap-x-4 gap-y-10 leading-6 sm:grid-cols-3 lg:grid-cols-5 lg:justify-items-center">
@@ -2265,27 +2421,27 @@
                                 <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Quick menu</h3>
                                 <ul class="space-y-5 font-medium">
                                     <li><a href="index.html" class="relative text-primary duration-300">Home</a></li>
-                                    <li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Services</a></li>
-                                    <li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Portfolio</a></li>
-                                    <li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Blog</a></li>
+                                    <li><a href="#services" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Services</a></li>
+                                    <li><a href="#performance" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Performance</a></li>
+                                    <li><a href="#why-us" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Why us</a></li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Company</h3>
                                 <ul class="space-y-5 font-medium">
-                                    <li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">About us</a></li>
-                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Help & support</a></li>
-                                    <li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Contact us</a></li>
+                                    <!--<li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Testimonial</a></li>-->
+                                    <li><a href="#contact" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Help & support</a></li>
+                                    <li><a href="#contact" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Contact us</a></li>
                                 </ul>
                             </div>
                             <div>
                                 <h3 class="pb-8 font-bold text-purple-700 dark:text-white">About us</h3>
                                 <ul class="space-y-5 font-medium">
-                                    <li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">FAQ</a></li>
-                                    <li><a href="javascript:" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Customer support</a></li>
+                                    <!--<li><a href="index.html" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Testimonial</a></li>-->
+                                    <li><a href="#contact" class="relative start-0 duration-300 hover:start-2 hover:text-primary">Customer support</a></li>
                                 </ul>
                             </div>
-                            <div>
+                            <!--<div>
                                 <h3 class="pb-8 font-bold text-purple-700 dark:text-white">Legal</h3>
                                 <ul class="space-y-5 font-medium">
                                     <li>
@@ -2489,5 +2645,52 @@
                 ]
             }
         </script>
+        <script>
+  (function () {
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('contactStatus');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = '';
+      const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+      };
+
+      // basic validation
+      if (!data.name || !data.email || !data.message) {
+        status.textContent = 'Please fill in all fields.';
+        return;
+      }
+
+      // show sending state
+      status.textContent = 'Sending...';
+
+      try {
+        // Replace '/api/contact' with your real serverless function or endpoint.
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          status.textContent = 'Thanks — your message has been sent!';
+          form.reset();
+        } else {
+          // If server returns an error, surface a friendly message
+          const json = await res.json().catch(() => ({}));
+          status.textContent = json?.error || 'Something went wrong — please try again later.';
+        }
+      } catch (err) {
+        // Network or endpoint not available
+        status.textContent = 'Could not send message. Please check your connection or try again later.';
+        console.error('Contact form error:', err);
+      }
+    });
+  })();
+</script>
     </body>
 </html>
